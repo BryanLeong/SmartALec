@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.example.smartalec.CourseListActivity">
+
+    <com.github.ivbaranov.mli.MaterialLetterIcon
+            android:id="@+id/coursesBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:mli_shape_type="rect"
+            app:mli_shape_color="@color/greyBar"
+            app:mli_letter_size="26"
+            app:mli_letter="C O U R S E S"
+            app:mli_initials_number="7"
+            app:mli_initials="true"/>
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/courseRecyclerView">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              tools:context="com.example.smartalec.LoginActivity">
+
+    <com.github.ivbaranov.mli.MaterialLetterIcon
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:mli_shape_type="rect"
+            app:mli_shape_color="@color/greyBar"
+            app:mli_letter_size="26"
+            app:mli_letter="S M A R T A L E C"
+            app:mli_initials_number="9"
+            app:mli_initials="true"/>
+
+    <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:inputType="textEmailAddress"/>
+
+    <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:inputType="textPassword"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <Button
+                android:id="@+id/resetPasswordButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reset Password"/>
+
+        <Button
+                android:id="@+id/loginButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/common_signin_button_text"/>
+
+    </LinearLayout>
+
+</LinearLayout>

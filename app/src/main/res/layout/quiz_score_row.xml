@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/CardView.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:ignore="ContentDescription">
+
+    <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/quizScoreId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textDark"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:gravity="left"
+                android:layout_weight="2.5"/>
+
+        <TextView
+                android:id="@+id/quizScoreName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textDark"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:gravity="left"
+                android:layout_weight="7"/>
+
+        <TextView
+                android:id="@+id/quizScoreScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textLight"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_weight="2"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

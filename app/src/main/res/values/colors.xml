@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="textDark">#DE000000</color>
+    <color name="textLight">#8A000000</color>
+
+    <color name="iconQuiz">#AF0000</color>
+    <color name="iconLecture">#646464</color>
+
+    <color name="greyBar">#757575</color>
+</resources>
