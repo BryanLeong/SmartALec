@@ -100,7 +100,7 @@ public class CourseListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     Context context = view.getContext();
                     Intent intent;
-                    if (user.getType().equals("student")) {
+                    if (user.getType().equals("instructor")) {
                         intent = new Intent(context, InstructorCourseActivity.class);
                     } else {
                         intent = new Intent(context, StudentCourseActivity.class);
