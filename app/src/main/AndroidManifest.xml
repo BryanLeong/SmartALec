@@ -12,25 +12,30 @@
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".CourseListActivity">
         </activity>
-        <activity android:name=".InstructorCourseActivity">
+        <activity android:name=".InstructorCourseActivity"
+                android:parentActivityName=".CourseListActivity">
         </activity>
         <activity android:name=".LoginActivity">
         </activity>
-        <activity android:name=".StudentQuizActivity">
+        <activity android:name=".StudentQuizActivity"
+                android:parentActivityName=".StudentCourseActivity">
         </activity>
-        <activity android:name=".StudentCourseActivity">
+        <activity android:name=".StudentCourseActivity"
+                android:parentActivityName=".CourseListActivity">
         </activity>
-        <activity android:name=".StudentLectureActivity">
+        <activity android:name=".StudentLectureActivity"
+                android:parentActivityName=".StudentCourseActivity">
         </activity>
-        <activity android:name=".InstructorLectureActivity">
+        <activity android:name=".InstructorLectureActivity"
+                android:parentActivityName=".InstructorCourseActivity">
         </activity>
-        <activity android:name=".InstructorQuizActivity">
+        <activity android:name=".InstructorQuizActivity"
+                android:parentActivityName=".InstructorCourseActivity">
         </activity>
     </application>
 
