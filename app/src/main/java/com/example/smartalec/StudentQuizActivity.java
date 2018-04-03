@@ -82,7 +82,7 @@ public class StudentQuizActivity extends AppCompatActivity {
                         .setValue(new Score(studentId, studentName, correctAnswers.size()));
                 database.child("quizzes").child(courseId).child(quizId).child("completed").push().setValue(studentId);
                 Toast.makeText(StudentQuizActivity.this,
-                        "Answers Submitted! You got " + correctAnswers.size() + " questions correct",
+                        "Answers Submitted! You got " + correctAnswers.size() + " question(s) correct",
                         Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(StudentQuizActivity.this, StudentCourseActivity.class);
                 intent.putExtra("courseId", courseId);
@@ -121,7 +121,7 @@ public class StudentQuizActivity extends AppCompatActivity {
         private TextView quizQuestionTextView;
         private Spinner quizQuestionSpinner;
         private View view;
-        private String answer = "";
+        private List<String> answers;
 
         public QuestionViewHolder(View view) {
             super(view);
@@ -132,10 +132,11 @@ public class StudentQuizActivity extends AppCompatActivity {
             String[] rawArr = rawQuestion.split(";");
             question = rawArr[0];
             options = new ArrayList<>();
+            answers = new ArrayList<>();
             for (int i = 1; i < rawArr.length; i++) {
                 String option = rawArr[i].replace("@", "");
                 if (rawArr[i].contains("@")) {
-                    answer = option;
+                    answers.add(option);
                 }
                 options.add(option);
             }
@@ -149,11 +150,11 @@ public class StudentQuizActivity extends AppCompatActivity {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     String selected = (String) adapterView.getSelectedItem();
-                    if (selected.equals(answer)) {
-                        correctAnswers.add(answer);
+                    if (answers.contains(selected)) {
+                        correctAnswers.add(String.valueOf(getAdapterPosition()));
                     } else {
-                        if (correctAnswers.contains(selected)) {
-                            correctAnswers.remove(selected);
+                        if (correctAnswers.contains(String.valueOf(getAdapterPosition()))) {
+                            correctAnswers.remove(String.valueOf(getAdapterPosition()));
                         }
                     }
                 }
