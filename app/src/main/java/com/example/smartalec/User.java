@@ -57,12 +57,4 @@ public class User {
     public void setCourses(List<String> courses) {
         this.courses = courses;
     }
-
-    public void addCourse(String course) {
-        courses.add(course);
-    }
-
-    public void removeCourse(String course) {
-        courses.remove(course);
-    }
 }
