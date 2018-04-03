@@ -84,12 +84,6 @@ public class StudentQuizActivity extends AppCompatActivity {
                 Toast.makeText(StudentQuizActivity.this,
                         "Answers Submitted! You got " + correctAnswers.size() + " question(s) correct",
                         Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(StudentQuizActivity.this, StudentCourseActivity.class);
-                intent.putExtra("courseId", courseId);
-                intent.putExtra("courseName", courseName);
-                intent.putExtra("courseInstructors", courseInstructors);
-                intent.putExtra("color", color);
-                startActivity(intent);
                 finish();
             }
         });
