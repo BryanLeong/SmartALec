@@ -21,9 +21,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
 
-/**
- * Created by lowweian on 4/4/2018.
- */
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -120,6 +117,7 @@ public class LoginActivityTest {
         onView(withText("Authentication failed")).
                 inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).
                 check(matches(isDisplayed()));
+
         SystemClock.sleep(3000);
     }
 
