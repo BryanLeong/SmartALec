@@ -12,7 +12,6 @@ Automated client side marking of quizzes and updating of scores in a list which 
 Leave anonymous feedback and during-lecture questions for instructors to see
 
 ## Software testing
-Unit tests to test particular class functions and some system tests to test the overall flow of the program have been implemented
-
-## To be implemented
-Further and more extensive unit and system-wide tests to test reliability and robustness of the system.
+Unit tests to test particular class functions and some system tests to test the overall flow of the program have been implemented.
+In addition, the system has undergone extensive stress testing with the help of Firebases' "Test Lab for Android", with
+pseudo randomly generated input events on up to 10 devices at once.
